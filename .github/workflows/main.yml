@@ -24,12 +24,12 @@ jobs:
         echo ">>>--------------------------------------------------------<<<"
 
     - name: Run Cobol Check on Mainframe
-	env:
-	  ZOWE_USERNAME: ${{ ZOWE_USERNAME }}
-	  ZOWE_PASSWORD: ${{ ZOWE_PASSWORD }}
-	run: |
-	  chmod +x ./github/scripts/mainframe-operations.sh
-	  ./github/scripts/mainframe-operations.sh
+      env:
+        ZOWE_USERNAME: ${{ ZOWE_USERNAME }}
+	ZOWE_PASSWORD: ${{ ZOWE_PASSWORD }}
+      run: |
+	chmod +x ./github/scripts/mainframe-operations.sh
+	./github/scripts/mainframe-operations.sh
 
 #    - name: Setup Mainframe Environment and Upload COBOL Check
 #      env:
