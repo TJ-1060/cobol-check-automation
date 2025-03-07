@@ -14,13 +14,13 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: Setup Mainframe Environment and Upload COBOL Check 
-      env: 
-        ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
-        ZOWE_PASSWORD: ${{ secrets.ZOWE_PASSWORD }}
-      run: |
-        chmod +x .github/scripts/zowe-operations.sh
-        .github/scripts/zowe-operations.sh
+#    - name: Setup Mainframe Environment and Upload COBOL Check 
+#      env: 
+#        ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
+#        ZOWE_PASSWORD: ${{ secrets.ZOWE_PASSWORD }}
+#      run: |
+#        chmod +x .github/scripts/zowe-operations.sh
+#        .github/scripts/zowe-operations.sh
 
     - name: Run Cobol Check on Mainframe
       env:
