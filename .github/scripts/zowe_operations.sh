@@ -1,7 +1,7 @@
 #!/bin/bash
 #zowe_operations.sh
 # Convert username to lowercase
-LOWERCASE_USERNAME=$(echo "$ZOWE_USERNAME" | tr '[:upper:]' '[:lower:]')
+export LOWERCASE_USERNAME=$(echo "$ZOWE_USERNAME" | tr '[:upper:]' '[:lower:]')
 
 echo $LOWERCASE_USERNAME
 pwd
