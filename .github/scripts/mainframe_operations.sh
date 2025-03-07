@@ -2,7 +2,7 @@
 #mainframe_operations.sh
 #Set up environment
 export PATH=$PATH:/usr/lpp/java/J8.0_64/bin
-export JAVA_HOME=/usr/lpp/java/J8 .0 _64
+export JAVA_HOME=/usr/lpp/java/J8.0_64
 export PATH=$PATH:/usr/lpp/zowe/cli/node/bin
 # Check Java availability
 java -version
@@ -28,8 +28,8 @@ echo "Running cobolcheck for $program "
 ./cobolcheck -p $program
 echo "Cobolcheck execution completed for $program ( exceptions may have
 occurred ) "
-# Check if CC ##99. CBL was created , regardless of cobolcheck exit status
-if [-f "CC ##99.CBL"]; then
+# Check if CC##99.CBL was created , regardless of cobolcheck exit status
+if [-f "CC##99.CBL"]; then
 # Copy to the MVS dataset
 if cp CC##99.CBL "//'${ZOWE_USERNAME}.CBL($program)'"; then
 echo " Copied CC##99.CBL to ${ZOWE_USERNAME}.CBL($program)"
