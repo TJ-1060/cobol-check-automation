@@ -2,6 +2,9 @@
 #zowe_operations.sh
 # Convert username to lowercase
 LOWERCASE_USERNAME=$(echo "$ZOWE_USERNAME" | tr '[:upper:]' '[:lower:]')
+
+echo $LOWERCASE_USERNAME
+
 # Check if directory exists , create if it doesn 't
 
 #if ! zowe zos-files list uss-files "/z/$LOWERCASE_USERNAME/cobolcheck" 
@@ -14,9 +17,9 @@ else
   echo "Directory already exists."
 fi
 # Upload files
-zowe zos-files upload dir-to-uss "./cobol-check"
+zowe zos-files upload dir-to-uss "./cobolcheck"
   "/z/$LOWERCASE_USERNAME/cobolcheck" --recursive --binary-files
-  "cobol-check-0.2.16.jar"
+  "cobol-check-0.2.09.jar"
 # Verify upload
 echo "Verifying upload: "
 zowe zos-files list uss-files "/z/$LOWERCASE_USERNAME/cobolcheck"
