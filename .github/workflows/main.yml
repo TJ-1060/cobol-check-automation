@@ -29,7 +29,7 @@ jobs:
 	  ZOWE_PASSWORD: ${{ ZOWE_PASSWORD }}
 	run: |
 	  chmod +x ./github/scripts/mainframe-operations.sh
-	  ./github/scripts/mainfraime-operations.sh
+	  ./github/scripts/mainframe-operations.sh
 
 #    - name: Setup Mainframe Environment and Upload COBOL Check
 #      env:
