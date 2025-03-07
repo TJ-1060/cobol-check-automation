@@ -4,6 +4,7 @@
 LOWERCASE_USERNAME=$(echo "$ZOWE_USERNAME" | tr '[:upper:]' '[:lower:]')
 
 echo $LOWERCASE_USERNAME
+pwd
 
 # Check if directory exists , create if it doesn 't
 
