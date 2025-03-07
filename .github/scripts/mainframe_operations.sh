@@ -22,7 +22,7 @@ echo " Made linux_gnucobol_run_tests executable "
 cd ..
 # Function to run cobolcheck and copy files
 run_cobolcheck() {
-	program = $1
+	program=$1
 	echo "Running cobolcheck for $program "
 	# Run cobolcheck , but don 't exit if it fails
 	./cobolcheck -p $program
@@ -49,6 +49,7 @@ run_cobolcheck() {
 		echo " ${program}.JCL not found "
 	fi
 }
+
 # Run for each program
 for program in NUMBERS EMPPAY DEPTPAY ; do
 	run_cobolcheck $program
