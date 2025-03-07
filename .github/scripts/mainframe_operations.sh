@@ -20,7 +20,7 @@ ls -la
 cd scripts
 chmod +x linux_gnucobol_run_tests
 echo " Made linux_gnucobol_run_tests executable "
-ls -la
+ls -la"
 cd ..
 pwd
 # Function to run cobolcheck and copy files
@@ -29,12 +29,12 @@ run_cobolcheck() {
 	echo "Running cobolcheck for $program "
 	# Run cobolcheck , but don 't exit if it fails
 	echo "PWD = $(pwd), $program"
-	./cobolcheck -p ../$program
+	./cobolcheck -p $program
 	echo "Cobolcheck execution completed for $program ( exceptions may have occurred ) "
 	# Check if CC##99.CBL was created , regardless of cobolcheck exit status
 	if [ -f "CC##99.CBL" ]; then
 		# Copy to the MVS dataset
-		if cp CC##99.CBL "//'${ZOWE_USERNAME}.CBL($program)'"; then
+		if cp "CC##99.CBL" "/'${ZOWE_USERNAME}.CBL($program)'"; then
 			echo " Copied CC##99.CBL to ${ZOWE_USERNAME}.CBL($program)"
 		else
 			echo " Failed to copy CC##99.CBL to ${ZOWE_USERNAME}.CBL($program)"
@@ -44,7 +44,7 @@ run_cobolcheck() {
 	fi
 	# Copy the JCL file if it exists
 	if [ -f "${program}.JCL" ]; then
-		if cp ${program}.JCL "//'${ZOWE_USERNAME}.JCL($program)'" ; then
+		if cp ${program}.JCL "/'${ZOWE_USERNAME}.JCL($program)'" ; then
 			echo " Copied ${program}.JCL to ${ZOWE_USERNAME}.JCL($program)"
 		else
 			echo " Failed to copy ${program}.JCL to ${ZOWE_USERNAME}.JCL($program)"
