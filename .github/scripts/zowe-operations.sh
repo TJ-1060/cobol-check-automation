@@ -1,6 +1,7 @@
 #!/bin/bash
 # zowe_operations.sh
 # convert username to lowercase
+export PATH=$PATH:/usr/lpp/java/J8.0_64/bin
 export PATH=$PATH:/usr/lpp/zowe/cli/node/bin
 echo $PATH
 
