@@ -3,7 +3,7 @@
 # convert username to lowercase
 # export PATH=$PATH:/usr/lpp/java/J8.0_64/bin
 # export PATH=$PATH:/usr/lpp/zowe/cli/node/bin
-echo $PATH
+echo $(pwd)
 export MSYS_NO_PATHCONV=1
 LOWERCASE_USERNAME=$(echo "$ZOWE_USERNAME" | tr '[:upper:]' '[:lower:]')
 
