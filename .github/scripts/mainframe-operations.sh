@@ -18,10 +18,10 @@ ls -la
 chmod +x cobolcheck
 echo "Made cobolcheck +x."
 
-cd scripts
-chmod +x linux_gnucobol_run_tests
-echo "Made linux_gnucobol_run_tests +x."
-cd ..
+#cd scripts
+#chmod +x linux_gnucobol_run_tests
+#echo "Made linux_gnucobol_run_tests +x."
+#cd ..
 
 #Function to run cobolcheck and copy files
 run_cobolcheck() {
