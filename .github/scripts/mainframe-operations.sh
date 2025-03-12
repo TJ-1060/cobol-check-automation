@@ -17,6 +17,7 @@ ls -la
 #Make cobolcheck +x
 chmod +x cobolcheck
 echo "Made cobolcheck +x."
+ls -la
 
 cd scripts
 chmod +x linux_gnucobol_run_tests
