@@ -4,7 +4,7 @@
 # export PATH=$PATH:/usr/lpp/java/J8.0_64/bin
 # export PATH=$PATH:/usr/lpp/zowe/cli/node/bin
 # echo $PATH
-
+export MSYS_NO_PATHCONV=1
 LOWERCASE_USERNAME=$(echo "$ZOWE_USERNAME" | tr '[:upper:]' '[:lower:]')
 
 # check if dir exists
